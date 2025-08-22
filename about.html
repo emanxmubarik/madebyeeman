@@ -4,110 +4,111 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>madebyeman</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
   <style>
     :root{
-      --ink:#0f172a;
-      --muted:#667085;
-      --accent:#aac09f;
-      --card:#ffffff;
+      --ink:#1f2937;
+      --muted:#5b6472;
+      --white:#ffffff;
+      --pink:#ffd9e8;
+      --peach:#ffe7d6;
+      --lav:#e8e6ff;
+      --accent:#f6b7cd;
+      --accent2:#b7e4d8;
+      --ring:#f0edf7;
+      --shadow:0 18px 40px rgba(31,41,55,.12);
     }
     *{box-sizing:border-box}
-    body{
-      font-family:'Quicksand',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      margin:0;
-      color:var(--ink);
-      background:#f8fafc;
+    html,body{height:100%}
+
+    body {
+      background-image: url("https://www.dropbox.com/scl/fi/blzddplm78w0llkrkyfgl/Screenshot-2025-08-22-at-4.52.04-PM.png?rlkey=2ejim0cb7j6ombouh5xcwij9l&st=2lqihpxi&raw=1");
+      background-repeat: repeat;
+      background-size: 200px 200px; 
+      margin: 0;
+      color: var(--ink);
+      font-family: 'Quicksand', sans-serif;
     }
+
     header{
-      background:var(--accent);
-      padding:1rem 2rem;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      box-shadow:0 2px 5px rgba(0,0,0,.1);
+      position: sticky; top:0; z-index:20;
+      background:rgba(255,255,255,.8);
+      backdrop-filter: blur(8px);
+      border-bottom:1px solid var(--ring);
+      padding: .9rem 1.25rem;
     }
-    header h1{margin:0;font-size:1.4rem;letter-spacing:.5px}
+    .nav{
+      max-width:1100px; margin:0 auto;
+      display:flex; align-items:center; justify-content:space-between;
+    }
+    .brand{
+      font-weight:800; font-size:1.3rem; letter-spacing:.5px;
+    }
     nav a{
-      text-decoration:none;
-      margin:0 .75rem;
-      color:#223;
-      font-weight:700;
-      padding:.35rem .5rem;
-      border-radius:.5rem;
+      text-decoration:none; font-weight:700; color:#3a3a3a;
+      padding:.5rem .8rem; border-radius:10px;
+      transition: all .2s ease;
     }
-    nav a:hover{background:rgba(0,0,0,.06)}
-    nav a.active{background:#fff;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.08)}
-    main{
-      max-width:920px;
-      margin:3rem auto;
-      padding:0 1rem;
+    nav a:hover{ background: #fff; box-shadow: 0 6px 14px rgba(31,41,55,.08); }
+
+    main{ max-width:900px; margin: 3rem auto; padding: 0 1.25rem; }
+
+    .title{
+      text-align: center;
+      font-family:'Playfair Display', serif;
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      line-height:1.1; margin:.1rem 0 .75rem;
     }
-    .about-card{
-      background:var(--card);
-      border-radius:16px;
-      padding:2rem;
-      box-shadow:0 10px 25px rgba(2,8,23,.06);
-      border:1px solid #e2e8f0;
+
+    .inner-page{
+      padding: 2rem;
+      background: #ffffff;
     }
-    h2{
-      font-size:2.4rem;
-      margin:0 0 .75rem;
-      line-height:1.2;
-      position:relative;
+    .tile{
+      background:#fff; border:1px solid var(--ring); border-radius:16px; padding:1.2rem 1.25rem;
+      display:flex; align-items:center; justify-content:space-between; gap:1rem;
+      box-shadow: 0 12px 26px rgba(31,41,55,.08); text-decoration:none; color:inherit;
+      transition: transform .08s ease, box-shadow .2s ease;
     }
-    h2::after{
-      content:"";
-      display:block;
-      width:88px;
-      height:6px;
-      border-radius:6px;
-      background:var(--accent);
-      margin-top:.4rem;
+
+    .lead {
+      text-align: center;
     }
-    p{
-      font-size:1.1rem;
-      line-height:1.85;
-      color:var(--muted);
-      margin:1rem 0 0;
-    }
+
     footer{
-      background:#fff;
-      padding:1rem;
-      text-align:center;
-      font-size:.95rem;
-      color:#6b7280;
-      box-shadow:0 -2px 5px rgba(0,0,0,.05);
-      margin-top:3rem;
+      margin-top:3rem; background:rgba(255,255,255,.8);
+      backdrop-filter: blur(6px);
+      border-top:1px solid var(--ring); text-align:center; color:#6b7280; font-size:.95rem; padding:1rem;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>madebyeman</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html" class="active">About Me</a>
-    <a href="projects.html">Coding Projects</a>
-    <a href="writing.html">Writing Projects</a>
-  </nav>
-</header>
+  <header>
+    <div class="nav">
+      <div class="brand">madebyeman</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="projects.html">Coding Projects</a>
+        <a href="writing.html">Writing Projects</a>
+      </nav>
+    </div>
+  </header>
 
-<main>
-  <section class="about-card">
-    <h2>About Me</h2>
-    <p>
-      Hi, my name is Eman Mubarik. I’m a student interested in both journalism and computer science.
-      Through my work, I explore the intersection of storytelling and technology—whether it’s through
-      writing, coding projects, or web design. I enjoy taking on projects that let me grow as both a
-      writer and developer, and I’m always curious to learn new skills.
-    </p>
-  </section>
-</main>
+  <main>
+    <div class="inner-page">
+    <h1 class="title">About Me</h1>
+    <p class="lead">Hi, I'm Eman and I'm currently a junior at CCNY majoring in computer science and minoring in journalism. Between classes, I like to read, play video games, and hang out with my friends. Check out my website to explore my projects!</p>   
+    </div>
+  </main>
 
-<footer>
-  &copy; 2025 Made by Eman Mubarik — All rights reserved.
-</footer>
+  <footer>
+    &copy; 2025 Made by Eman Mubarik — All rights reserved.
+  </footer>
 
 </body>
 </html>

@@ -1,94 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>madebyeman</title>
-    <style>
-        body {
-            font-family: 'Quicksand', sans-serif;
-            margin: 0;
-            background-color: #ffffff;
-            color: #000000;
-        }
-        header {
-            background-color: #aac09f;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        header h1 {
-            margin: 0;
-        }
-        header h2 {
-            font-weight: bold;
-            color: #000000;
-            text-align: center;
-        }
-        nav a {
-            text-decoration: none;
-            margin: 0 1rem;
-            color: #333;
-            font-weight: bold;
-        }
-        nav a:hover {
-            color: #070707;
-        }
-        main {
-            max-width: 1000px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-        .content-row {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-        }
-        .content-row img {
-            max-width: 400px;
-            height: auto;
-        }
-        .content-row h2 {
-            font-size: 2.5rem;
-        }
-        p {
-            margin-top: 20px;
-            font-size: 20px;
-            line-height: 1.8;
-        }
-        footer {
-            background-color: white;
-            padding: 1rem;
-            text-align: center;
-            font-size: 0.9rem;
-            color: #666;
-            box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
-            margin-top: 2rem;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>madebyeman</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --ink:#1f2937;
+      --muted:#5b6472;
+      --white:#ffffff;
+      --pink:#ffd9e8;
+      --peach:#ffe7d6;
+      --lav:#e8e6ff;
+      --accent:#f6b7cd;
+      --accent2:#b7e4d8;
+      --ring:#f0edf7;
+      --shadow:0 18px 40px rgba(31,41,55,.12);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+
+    body {
+      background-image: url("https://www.dropbox.com/scl/fi/blzddplm78w0llkrkyfgl/Screenshot-2025-08-22-at-4.52.04-PM.png?rlkey=2ejim0cb7j6ombouh5xcwij9l&st=2lqihpxi&raw=1");
+      background-repeat: repeat;
+      background-size: 200px 200px; 
+      margin: 0;
+      color: var(--ink);
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    header{
+      position: sticky; top:0; z-index:20;
+      background:rgba(255,255,255,.8);
+      backdrop-filter: blur(8px);
+      border-bottom:1px solid var(--ring);
+      padding: .9rem 1.25rem;
+    }
+    .nav{
+      max-width:1100px; margin:0 auto;
+      display:flex; align-items:center; justify-content:space-between;
+    }
+    .brand{
+      font-weight:800; font-size:1.3rem; letter-spacing:.5px;
+    }
+    nav a{
+      text-decoration:none; font-weight:700; color:#3a3a3a;
+      padding:.5rem .8rem; border-radius:10px;
+      transition: all .2s ease;
+    }
+    nav a:hover{ background: #fff; box-shadow: 0 6px 14px rgba(31,41,55,.08); }
+
+    main{ max-width:900px; margin: 3rem auto; padding: 0 1.25rem; }
+
+    .title{
+      text-align: center;
+      font-family:'Playfair Display', serif;
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      line-height:1.1; margin:.1rem 0 .75rem;
+    }
+
+    .inner-page{
+      padding: 2rem;
+      background: #ffffff;
+    }
+    .tile{
+      background:#fff; border:1px solid var(--ring); border-radius:16px; padding:1.2rem 1.25rem;
+      display:flex; align-items:center; justify-content:space-between; gap:1rem;
+      box-shadow: 0 12px 26px rgba(31,41,55,.08); text-decoration:none; color:inherit;
+      transition: transform .08s ease, box-shadow .2s ease;
+    }
+
+    .lead {
+      text-align: center;
+    }
+
+    footer{
+      margin-top:3rem; background:rgba(255,255,255,.8);
+      backdrop-filter: blur(6px);
+      border-top:1px solid var(--ring); text-align:center; color:#6b7280; font-size:.95rem; padding:1rem;
+    }
+  </style>
 </head>
 <body>
 
-<header>
-    <h1>madebyeman</h1>
-   <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Me</a>
-    <a href="projects.html">Coding Projects</a>
-    <a href="writing.html">Writing Projects</a>
-</nav>
-</header>
+  <header>
+    <div class="nav">
+      <div class="brand">madebyeman</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="projects.html">Coding Projects</a>
+        <a href="writing.html">Writing Projects</a>
+      </nav>
+    </div>
+  </header>
 
-<main>
-   
-</main>
+  <main>
+    <div class="inner-page">
+    <h1 class="title">Coding Projects</h1>
+    <p class="lead">Hi, I'm Eman and I'm currently a junior at CCNY majoring in computer science and minoring in journalism. Between classes, I like to read, play video games, and hang out with my friends. Check out my website to explore my projects!</p>   
+    </div>
+  </main>
 
-<footer>
+  <footer>
     &copy; 2025 Made by Eman Mubarik — All rights reserved.
-</footer>
+  </footer>
 
 </body>
 </html>
-
