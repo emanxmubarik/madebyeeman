@@ -65,18 +65,49 @@
 
     .inner-page{
       padding: 2rem;
-      background: #ffffff;
-    }
-    .tile{
-      background:#fff; border:1px solid var(--ring); border-radius:16px; padding:1.2rem 1.25rem;
-      display:flex; align-items:center; justify-content:space-between; gap:1rem;
-      box-shadow: 0 12px 26px rgba(31,41,55,.08); text-decoration:none; color:inherit;
-      transition: transform .08s ease, box-shadow .2s ease;
+      background: #bed0e2;
     }
 
     .lead {
       text-align: center;
     }
+
+    .stories-grid{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap:1rem;
+}
+@media (max-width: 900px){ .stories-grid{ grid-template-columns:1fr 1fr; } }
+@media (max-width: 600px){ .stories-grid{ grid-template-columns:1fr; } }
+
+.story-card{
+  background:#fff;
+  border:1px solid var(--ring);
+  border-radius:16px;
+  padding:1rem 1.1rem;
+  box-shadow:0 12px 26px rgba(31,41,55,.08);
+  text-decoration:none;
+  color:inherit;
+  display:flex;
+  flex-direction:column;
+  gap:.4rem;
+  transition:transform .08s ease, box-shadow .2s ease;
+}
+.story-card:hover{
+  transform:translateY(-2px);
+  box-shadow:0 16px 32px rgba(31,41,55,.12);
+}
+.story-card h4{
+  margin:.1rem 0;
+  font-weight:800;
+  font-size:1.05rem;
+}
+.story-card p{
+  margin:0;
+  color:#6b7280;
+  font-size:.95rem;
+  line-height:1.6;
+}
 
     footer{
       margin-top:3rem; background:rgba(255,255,255,.8);
@@ -95,15 +126,54 @@
         <a href="about.html">About Me</a>
         <a href="projects.html">Coding Projects</a>
         <a href="writing.html">Writing Projects</a>
+        <a href="contact.html">Contact Me</a>
       </nav>
     </div>
   </header>
 
   <main>
     <div class="inner-page">
-    <h1 class="title">Welcome To My Website!</h1>
-    <p class="lead"> </p>   
+    <h1 class="title">Writing Projects</h1>
+    <p class="lead">Below are some stories I've written.</p>   
     </div>
+
+    <div class="inner-page">
+  <h3 class="title">Stories</h3>
+  <div class="stories-grid">
+
+    <a class="story-card" href="https://harlemview.com/city-college/2025/04/protest-temporarily-locks-down-ccny/" target="_blank" rel="noopener">
+      <h4>Protest Temporarily Locks Down CCNY</h4>
+      <p> </p>
+    </a>
+
+    <a class="story-card" href="https://harlemview.com/latest/2025/05/ranked-choice-voting-2025-explained/" target="_blank" rel="noopener">
+      <h4>Ranked-Choice Voting 2025, Explained</h4>
+      <p> </p>
+    </a>
+
+    <a class="story-card" href="https://harlemview.com/featured/2025/05/nyc-mayoral-primary-issues/" target="_blank" rel="noopener">
+      <h4>NYC Mayoral Primary: The Issues</h4>
+      <p> </p>
+    </a>
+
+    <a class="story-card" href="https://harlemview.com/community/2025/05/follow-the-money-mayoral-primary-2025/" target="_blank" rel="noopener">
+      <h4>Follow the Money: Mayoral Primary 2025</h4>
+      <p></p>
+    </a>
+
+    <a class="story-card" href="https://harlemview.com/featured/2025/05/meet-2025-new-york-city-mayoral-primary-candidates/" target="_blank" rel="noopener">
+      <h4>Meet the 2025 NYC Mayoral Primary Candidates</h4>
+      <p> </p>
+    </a>
+
+    <a class="story-card" href="https://harlemview.com/community/2025/03/bensonhurst-residents-fight-proposed-homeless-shelter/" target="_blank" rel="noopener">
+      <h4>Bensonhurst Residents Fight Proposed Homeless Shelter</h4>
+      <p> </p>
+    </a>
+
+  </div>
+</div>
+
   </main>
 
   <footer>

@@ -60,22 +60,33 @@
       text-align: center;
       font-family:'Playfair Display', serif;
       font-size: clamp(2rem, 4.5vw, 3rem);
-      line-height:1.1; margin:.1rem 0 .75rem;
+      line-height:1.1; margin:.1rem 0 2rem;
     }
 
     .inner-page{
       padding: 2rem;
-      background: #ffffff;
-    }
-    .tile{
-      background:#fff; border:1px solid var(--ring); border-radius:16px; padding:1.2rem 1.25rem;
-      display:flex; align-items:center; justify-content:space-between; gap:1rem;
-      box-shadow: 0 12px 26px rgba(31,41,55,.08); text-decoration:none; color:inherit;
-      transition: transform .08s ease, box-shadow .2s ease;
+      background: #bed0e2;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
     }
 
-    .lead {
-      text-align: center;
+    .about-container {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .profile-pic {
+      max-width: 250px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .about-container p {
+      flex: 1;
+      font-size: 18px;
+      line-height: 1.7;
     }
 
     footer{
@@ -95,14 +106,27 @@
         <a href="about.html">About Me</a>
         <a href="projects.html">Coding Projects</a>
         <a href="writing.html">Writing Projects</a>
+        <a href="contact.html">Contact Me</a>
       </nav>
     </div>
   </header>
 
   <main>
     <div class="inner-page">
-    <h1 class="title">About Me</h1>
-    <p class="lead">Hi, I'm Eman and I'm currently a junior at CCNY majoring in computer science and minoring in journalism. Between classes, I like to read, play video games, and hang out with my friends. Check out my website to explore my projects!</p>   
+      <h1 class="title">About Me</h1>
+      <div class="about-container">
+        <p>
+          Hi, I’m Eman Mubarik! I’m currently a junior at The City College of New York, where I’m majoring in Computer Science and minoring in Journalism. 
+          I enjoy writing articles and learning new coding languages, and I love exploring how my two interests merge connect — whether that’s 
+          building websites, coding tools, or writing articles that uncover important stories.
+          Outside of classes, I enjoy reading, playing video games, and exploring new places with my friends. 
+          I also love experimenting with other hobbies like photography, design, and fashion.
+          This website is my portfolio to share my work and projects. Feel free to explore and reach out if you’d like to connect!
+
+        </p>
+        <img src="https://www.dropbox.com/scl/fi/7dem01ku45x7x2g1fkxvz/HeadshotEmanMubarik.png?rlkey=hcbohuzhw7wpn9yks8pczm9nh&st=ea4yesfs&raw=1" 
+             alt="Eman Mubarik" class="profile-pic">
+      </div>
     </div>
   </main>
 
