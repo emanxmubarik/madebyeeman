@@ -71,6 +71,9 @@ header{
   color:var(--muted);
 }
 
+.hero-img {
+    flex-shrink: 0; 
+}
 .hero {
   display: flex;
   align-items: center;
