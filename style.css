@@ -124,8 +124,8 @@ header{
 
 /* PROFILE IMAGE */
 .hero-img img {
-  width: 260px;
-  height: 260px;
+  width: 500px;
+  height: 500px;
   object-fit: cover;
 
   border-radius: 50%;
