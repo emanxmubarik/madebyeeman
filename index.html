@@ -1,115 +1,115 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-<head> 
-  <meta charset="UTF-8" /> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
-  <title>madebyeman</title> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>madebyeman</title>
 
-  <!-- Fonts --> 
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"> 
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-  <style> 
-    :root{ 
-      --ink:#1f2937; 
-      --muted:#5b6472; 
-      --white:#ffffff; 
-      --pink:#ffd9e8; 
-      --peach:#ffe7d6; 
-      --lav:#e8e6ff; 
-      --accent:#f6b7cd; 
-      --accent2:#b7e4d8; 
-      --ring:#f0edf7; 
-      --shadow:0 18px 40px rgba(31,41,55,.12); 
-    } 
-    *{box-sizing:border-box} 
-    html,body{height:100%} 
+  <!-- YOUR CSS FILE -->
+  <link rel="stylesheet" href="style.css">
+</head>
 
-    body { 
-      background-image: url("https://www.dropbox.com/scl/fi/blzddplm78w0llkrkyfgl/Screenshot-2025-08-22-at-4.52.04-PM.png?rlkey=2ejim0cb7j6ombouh5xcwij9l&st=2lqihpxi&raw=1"); 
-      background-repeat: repeat; 
-      background-size: 200px 200px; 
-      margin: 0; 
-      color: var(--ink); 
-      font-family: 'Quicksand', sans-serif; 
-    } 
+<body>
 
-    header{ 
-      position: sticky; top:0; z-index:20; 
-      background:rgba(255,255,255,.8); 
-      backdrop-filter: blur(8px); 
-      border-bottom:1px solid var(--ring); 
-      padding: .9rem 1.25rem; 
-    } 
-    .nav{ 
-      max-width:1100px; margin:0 auto; 
-      display:flex; align-items:center; justify-content:space-between; 
-    } 
-    .brand{ 
-      font-weight:800; font-size:1.3rem; letter-spacing:.5px; 
-    } 
-    nav a{ 
-      text-decoration:none; font-weight:700; color:#3a3a3a; 
-      padding:.5rem .8rem; border-radius:10px; 
-      transition: all .2s ease; 
-    } 
-    nav a:hover{ background: #fff; box-shadow: 0 6px 14px rgba(31,41,55,.08); } 
+<header>
+  <div class="nav">
+    <div class="brand">madebyeman</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="projects.html">Coding Projects</a>
+      <a href="writing.html">Writing Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
 
-    main{ max-width:900px; margin: 3rem auto; padding: 0 1.25rem; } 
+<main>
 
-    .title{ 
-      text-align: center; 
-      font-family:'Playfair Display', serif; 
-      font-size: clamp(2rem, 4.5vw, 3rem); 
-      line-height:1.1; margin:.1rem 0 .75rem; 
-    } 
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Hi, I’m Eman!</h1>
+      <p> </p>
+      <a href="writing.html" class="btn">Read My Work →</a>
+    </div>
 
-    .inner-page{ 
-      padding: 2rem; 
-      background: #bed0e2; 
-    } 
-    .tile{ 
-      background:#fff; border:1px solid var(--ring); border-radius:16px; padding:1.2rem 1.25rem; 
-      display:flex; align-items:center; justify-content:space-between; gap:1rem; 
-      box-shadow: 0 12px 26px rgba(31,41,55,.08); text-decoration:none; color:inherit; 
-      transition: transform .08s ease, box-shadow .2s ease; 
-    } 
+    <div class="hero-img">
+      <img src="images/me.jpg" alt="Eman">
+    </div>
+  </section>
 
-    .lead { 
-      text-align: center; 
-    } 
+  <!-- FEATURED WRITING -->
+  <section class="section">
+    <h2 class="section-title">Featured Writing</h2>
 
-    footer{ 
-      margin-top:3rem; background:rgba(255,255,255,.8); 
-      backdrop-filter: blur(6px); 
-      border-top:1px solid var(--ring); text-align:center; color:#6b7280; font-size:.95rem; padding:1rem; 
-    } 
-  </style> 
-</head> 
-<body> 
+    <div class="grid">
 
-  <header> 
-    <div class="nav"> 
-      <div class="brand">madebyeman</div> 
-      <nav> 
-        <a href="index.html">Home</a> 
-        <a href="about.html">About Me</a> 
-        <a href="projects.html">Coding Projects</a> 
-        <a href="writing.html">Writing Projects</a> 
-        <a href="contact.html">Contact Me</a>
-      </nav> 
-    </div> 
-  </header> 
+      <a class="card" href="#">
+        <h3>Protest Temporarily Locks Down CCNY</h3>
+        <p>Coverage of student protests and campus response.</p>
+      </a>
 
-  <main> 
-    <div class="inner-page"> 
-      <h1 class="title">Welcome To My Website!</h1> 
-      <p class="lead">I write and code. Welcome to my little studio!</p> 
-    </div> 
-  </main> 
+      <a class="card" href="#">
+        <h3>Ranked Choice Voting Explained</h3>
+        <p>Breaking down NYC’s voting system.</p>
+      </a>
 
-  <footer> 
-    &copy; 2025 Made by Eman Mubarik — All rights reserved. 
-  </footer> 
+      <a class="card" href="#">
+        <h3>International Students & Policy</h3>
+        <p>Exploring systemic challenges in the U.S.</p>
+      </a>
 
-</body> 
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section">
+    <h2 class="section-title">Coding & Data Projects</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Student Data Dashboard</h3>
+        <p>Interactive visualization using Python + JS.</p>
+      </div>
+
+      <div class="card">
+        <h3>Housing Scraper</h3>
+        <p>Python scraper analyzing NYC housing data.</p>
+      </div>
+
+      <div class="card">
+        <h3>Policy Timeline</h3>
+        <p>Visual storytelling project combining journalism + code.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PERSONAL -->
+  <section class="section about-preview">
+    <div class="about-text">
+      <h2>AB</h2>
+      <p>
+        I care about equity, public service, and storytelling that reveals the systems behind everyday life.
+        My work blends journalism with data to create meaningful impact.
+      </p>
+    </div>
+
+    <div class="about-img">
+      <img src="images/collage.jpg" alt="collage">
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © 2026 Made by Eman Mubarik — All rights reserved.
+</footer>
+
+</body>
 </html>
