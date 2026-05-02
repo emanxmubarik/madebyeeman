@@ -38,6 +38,7 @@ header{
   font-weight:500;
 }
 
+/* GRID + CARDS */
 .grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -50,10 +51,25 @@ header{
   border-radius:14px;
   box-shadow:0 10px 25px rgba(0,0,0,0.05);
   transition:.2s;
+
+  /* FIX: remove blue link look */
+  text-decoration:none;
+  color:var(--text);
 }
 
 .card:hover{
-  transform:translateY(-5px);
+  transform:translateY(-6px);
+  box-shadow:0 15px 30px rgba(0,0,0,0.08);
+}
+
+.card h3{
+  font-family:'Playfair Display', serif;
+  margin-bottom:8px;
+}
+
+.card p{
+  color:var(--muted);
+  font-size:0.95rem;
 }
 
 /* PAGE HEADER */
@@ -71,6 +87,7 @@ header{
   color:var(--muted);
 }
 
+/* HERO */
 .hero-img {
   flex: 1;
   display: flex;
@@ -108,7 +125,7 @@ header{
   color: var(--muted);
 }
 
-/* WEBSITE BUTTONS */
+/* BUTTONS */
 .hero-buttons {
   margin-top: 15px;
   display: flex;
@@ -150,27 +167,6 @@ footer {
   color: #666;
 }
 
-/* This is to accommodate the mobile version. */
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-text {
-    text-align: center;
-  }
-
-  .hero-buttons {
-    justify-content: center;
-  }
-
-  .hero-img img {
-    width: 220px;
-    height: 220px;
-  }
-}
-
 /* ABOUT PAGE */
 .about {
   display: flex;
@@ -208,8 +204,26 @@ footer {
   margin-bottom: 12px;
 }
 
-/* This is to accommodate the mobile version. */
+/* RESPONSIVE */
 @media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-img img {
+    width: 220px;
+    height: 220px;
+  }
+
   .about {
     flex-direction: column;
     text-align: center;
@@ -219,58 +233,8 @@ footer {
     width: 250px;
     height: 250px;
   }
-}
-/* WRITING PROJECTS PAGE */
 
-.writing-container {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 0 20px;
-  text-align: center;
-}
-
-.writing-intro {
-  color: var(--muted);
-  margin-bottom: 2rem;
-  font-size: 1.05rem;
-}
-
-.writing-list {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
-
-.writing-list a {
-  text-decoration: none;
-  color: var(--text);
-  padding-bottom: 10px;
-  border-bottom: 1px solid #eee;
-  transition: 0.2s;
-}
-
-.writing-list a:hover {
-  transform: translateY(-2px);
-}
-
-.writing-list h3 {
-  margin: 0;
-  font-size: 1.2rem;
-}
-
-.writing-list p {
-  margin: 5px 0 0;
-  color: var(--muted);
-  font-size: 0.95rem;
-}
-
-.writing-grid {
-  max-width: 1100px;
-  margin: 2rem auto;
-  padding: 0 1.25rem;
-}
-
-.card {
-  text-decoration: none;
-  color: var(--text);
+  .grid{
+    grid-template-columns:1fr;
+  }
 }
