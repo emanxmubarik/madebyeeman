@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>madebyeman</title>
+  <title>Writing Projects | madebyeman</title>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
@@ -13,172 +13,199 @@
       --ink:#1f2937;
       --muted:#5b6472;
       --white:#ffffff;
-      --pink:#ffd9e8;
-      --peach:#ffe7d6;
-      --lav:#e8e6ff;
       --accent:#f6b7cd;
-      --accent2:#b7e4d8;
       --ring:#f0edf7;
       --shadow:0 18px 40px rgba(31,41,55,.12);
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
 
-    body {
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:'Quicksand', sans-serif;
+      color:var(--ink);
+
       background-image: url("https://www.dropbox.com/scl/fi/blzddplm78w0llkrkyfgl/Screenshot-2025-08-22-at-4.52.04-PM.png?rlkey=2ejim0cb7j6ombouh5xcwij9l&st=2lqihpxi&raw=1");
       background-repeat: repeat;
-      background-size: 200px 200px; 
-      margin: 0;
-      color: var(--ink);
-      font-family: 'Quicksand', sans-serif;
+      background-size: 200px 200px;
     }
 
+    /* NAV */
     header{
-      position: sticky; top:0; z-index:20;
+      position: sticky;
+      top:0;
       background:rgba(255,255,255,.8);
       backdrop-filter: blur(8px);
       border-bottom:1px solid var(--ring);
-      padding: .9rem 1.25rem;
+      padding:.9rem 1.25rem;
     }
+
     .nav{
-      max-width:1100px; margin:0 auto;
-      display:flex; align-items:center; justify-content:space-between;
+      max-width:1100px;
+      margin:auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
     }
+
     .brand{
-      font-weight:800; font-size:1.3rem; letter-spacing:.5px;
+      font-weight:800;
+      font-size:1.3rem;
     }
+
     nav a{
-      text-decoration:none; font-weight:700; color:#3a3a3a;
-      padding:.5rem .8rem; border-radius:10px;
-      transition: all .2s ease;
+      text-decoration:none;
+      font-weight:700;
+      color:#3a3a3a;
+      margin-left:1rem;
     }
-    nav a:hover{ background: #fff; box-shadow: 0 6px 14px rgba(31,41,55,.08); }
 
-    main{ max-width:900px; margin: 3rem auto; padding: 0 1.25rem; }
-
-    .title{
-      text-align: center;
-      font-family:'Playfair Display', serif;
-      font-size: clamp(2rem, 4.5vw, 3rem);
-      line-height:1.1; margin:.1rem 0 .75rem;
+    /* MAIN */
+    main{
+      max-width:900px;
+      margin:3rem auto;
+      padding:0 1.25rem;
     }
 
     .inner-page{
-      padding: 2rem;
-      background: #bed0e2;
+      padding:2.5rem;
+      background:#bed0e2;
+      border-radius:20px;
+      margin-bottom:2rem;
     }
 
-    .lead {
-      text-align: center;
+    .title{
+      text-align:center;
+      font-family:'Playfair Display', serif;
+      font-size:2.6rem;
+      margin-bottom:.5rem;
     }
 
+    .lead{
+      text-align:center;
+      color:var(--muted);
+      margin-bottom:1.5rem;
+    }
+
+    /* STORIES GRID */
     .stories-grid{
-  display:grid;
-  grid-template-columns: repeat(3, minmax(0,1fr));
-  gap:1rem;
-}
-@media (max-width: 900px){ .stories-grid{ grid-template-columns:1fr 1fr; } }
-@media (max-width: 600px){ .stories-grid{ grid-template-columns:1fr; } }
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:1rem;
+    }
 
-.story-card{
-  background:#fff;
-  border:1px solid var(--ring);
-  border-radius:16px;
-  padding:1rem 1.1rem;
-  box-shadow:0 12px 26px rgba(31,41,55,.08);
-  text-decoration:none;
-  color:inherit;
-  display:flex;
-  flex-direction:column;
-  gap:.4rem;
-  transition:transform .08s ease, box-shadow .2s ease;
-}
-.story-card:hover{
-  transform:translateY(-2px);
-  box-shadow:0 16px 32px rgba(31,41,55,.12);
-}
-.story-card h4{
-  margin:.1rem 0;
-  font-weight:800;
-  font-size:1.05rem;
-}
-.story-card p{
-  margin:0;
-  color:#6b7280;
-  font-size:.95rem;
-  line-height:1.6;
-}
+    @media (max-width:900px){
+      .stories-grid{ grid-template-columns:1fr 1fr; }
+    }
+
+    @media (max-width:600px){
+      .stories-grid{ grid-template-columns:1fr; }
+    }
+
+    /* STORY CARD */
+    .story-card{
+      background:#fff;
+      border-radius:16px;
+      padding:1.1rem;
+      box-shadow:0 12px 26px rgba(31,41,55,.08);
+      text-decoration:none;
+      color:inherit;
+      transition:.2s;
+    }
+
+    .story-card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 16px 32px rgba(31,41,55,.12);
+    }
+
+    .story-card h4{
+      margin:.2rem 0;
+      font-size:1.05rem;
+      font-weight:800;
+    }
+
+    .story-card p{
+      margin:0;
+      font-size:.95rem;
+      color:#6b7280;
+      line-height:1.6;
+    }
 
     footer{
-      margin-top:3rem; background:rgba(255,255,255,.8);
-      backdrop-filter: blur(6px);
-      border-top:1px solid var(--ring); text-align:center; color:#6b7280; font-size:.95rem; padding:1rem;
+      margin-top:3rem;
+      text-align:center;
+      color:#6b7280;
+      padding:1rem;
     }
   </style>
 </head>
+
 <body>
 
-  <header>
-    <div class="nav">
-      <div class="brand">madebyeman</div>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
-        <a href="projects.html">Coding Projects</a>
-        <a href="writing.html">Writing Projects</a>
-        <a href="contact.html">Contact Me</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <div class="inner-page">
-    <h1 class="title">Writing Projects</h1>
-    <p class="lead">Below are some stories I've written.</p>   
-    </div>
-
-    <div class="inner-page">
-  <h3 class="title">Stories</h3>
-  <div class="stories-grid">
-
-    <a class="story-card" href="https://harlemview.com/city-college/2025/04/protest-temporarily-locks-down-ccny/" target="_blank" rel="noopener">
-      <h4>Protest Temporarily Locks Down CCNY</h4>
-      <p> </p>
-    </a>
-
-    <a class="story-card" href="https://harlemview.com/latest/2025/05/ranked-choice-voting-2025-explained/" target="_blank" rel="noopener">
-      <h4>Ranked-Choice Voting 2025, Explained</h4>
-      <p> </p>
-    </a>
-
-    <a class="story-card" href="https://harlemview.com/featured/2025/05/nyc-mayoral-primary-issues/" target="_blank" rel="noopener">
-      <h4>NYC Mayoral Primary: The Issues</h4>
-      <p> </p>
-    </a>
-
-    <a class="story-card" href="https://harlemview.com/community/2025/05/follow-the-money-mayoral-primary-2025/" target="_blank" rel="noopener">
-      <h4>Follow the Money: Mayoral Primary 2025</h4>
-      <p></p>
-    </a>
-
-    <a class="story-card" href="https://harlemview.com/featured/2025/05/meet-2025-new-york-city-mayoral-primary-candidates/" target="_blank" rel="noopener">
-      <h4>Meet the 2025 NYC Mayoral Primary Candidates</h4>
-      <p> </p>
-    </a>
-
-    <a class="story-card" href="https://harlemview.com/community/2025/03/bensonhurst-residents-fight-proposed-homeless-shelter/" target="_blank" rel="noopener">
-      <h4>Bensonhurst Residents Fight Proposed Homeless Shelter</h4>
-      <p> </p>
-    </a>
-
+<header>
+  <div class="nav">
+    <div class="brand">madebyeman</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="projects.html">Coding Projects</a>
+      <a href="writing.html">Writing Projects</a>
+      <a href="contact.html">Contact Me</a>
+    </nav>
   </div>
-</div>
+</header>
 
-  </main>
+<main>
 
-  <footer>
-    &copy; 2025 Made by Eman Mubarik — All rights reserved.
-  </footer>
+  <div class="inner-page">
+    <h1 class="title">Writing Projects</h1>
+    <p class="lead">
+      A collection of my reporting, focusing on community issues, policy, and data-driven storytelling.
+    </p>
+  </div>
+
+  <div class="inner-page">
+    <h3 class="title">Stories</h3>
+
+    <div class="stories-grid">
+
+      <a class="story-card" href="https://harlemview.com/city-college/2025/04/protest-temporarily-locks-down-ccny/" target="_blank">
+        <h4>Protest Temporarily Locks Down CCNY</h4>
+        <p>Coverage of a campus protest and its immediate impact on students and university operations.</p>
+      </a>
+
+      <a class="story-card" href="https://harlemview.com/latest/2025/05/ranked-choice-voting-2025-explained/" target="_blank">
+        <h4>Ranked-Choice Voting 2025, Explained</h4>
+        <p>An accessible breakdown of ranked-choice voting and how it shapes NYC elections.</p>
+      </a>
+
+      <a class="story-card" href="https://harlemview.com/featured/2025/05/nyc-mayoral-primary-issues/" target="_blank">
+        <h4>NYC Mayoral Primary: The Issues</h4>
+        <p>An overview of key issues shaping the mayoral primary and voter priorities.</p>
+      </a>
+
+      <a class="story-card" href="https://harlemview.com/community/2025/05/follow-the-money-mayoral-primary-2025/" target="_blank">
+        <h4>Follow the Money: Mayoral Primary 2025</h4>
+        <p>A look into campaign funding and financial influences in the NYC mayoral race.</p>
+      </a>
+
+      <a class="story-card" href="https://harlemview.com/featured/2025/05/meet-2025-new-york-city-mayoral-primary-candidates/" target="_blank">
+        <h4>Meet the 2025 NYC Mayoral Candidates</h4>
+        <p>Profiles of major candidates and their platforms heading into the election.</p>
+      </a>
+
+      <a class="story-card" href="https://harlemview.com/community/2025/03/bensonhurst-residents-fight-proposed-homeless-shelter/" target="_blank">
+        <h4>Bensonhurst Residents Fight Proposed Shelter</h4>
+        <p>Community perspectives and tensions surrounding a proposed homeless shelter.</p>
+      </a>
+
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  © 2026 Made by Eman Mubarik — All rights reserved.
+</footer>
 
 </body>
 </html>
