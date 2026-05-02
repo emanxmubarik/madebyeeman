@@ -68,3 +68,57 @@ header{
 .page-header p{
   color:var(--muted);
 }
+
+.hero{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  min-height: 80vh;
+}
+
+.hero-text{
+  flex: 1;
+}
+
+.hero-text h1{
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p{
+  color: #555;
+  margin-bottom: 2rem;
+  max-width: 400px;
+}
+
+.hero-buttons{
+  display: flex;
+  gap: 1rem;
+}
+
+.btn{
+  padding: 0.7rem 1.2rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  background: #f6b7cd;
+  color: white;
+}
+
+.btn.secondary{
+  background: #e5e7eb;
+  color: #333;
+}
+
+.hero-img{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-img img{
+  width: 320px;
+  border-radius: 20px;
+}
