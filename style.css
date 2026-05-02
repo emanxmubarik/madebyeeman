@@ -174,7 +174,7 @@ footer {
 /* ABOUT PAGE */
 .about {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 60px;
 
@@ -184,8 +184,8 @@ footer {
 }
 
 .about-img img {
-  width: 400px;
-  height: 400px;
+  width: 320px;
+  height: 320px;
   object-fit: cover;
 
   border-radius: 20px;
