@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>madebyeman</title>
+  <title>Coding Projects | madebyeman</title>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
@@ -13,133 +13,180 @@
       --ink:#1f2937;
       --muted:#5b6472;
       --white:#ffffff;
-      --pink:#ffd9e8;
-      --peach:#ffe7d6;
-      --lav:#e8e6ff;
       --accent:#f6b7cd;
-      --accent2:#b7e4d8;
       --ring:#f0edf7;
       --shadow:0 18px 40px rgba(31,41,55,.12);
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
 
-    body {
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:'Quicksand', sans-serif;
+      color:var(--ink);
+
       background-image: url("https://www.dropbox.com/scl/fi/blzddplm78w0llkrkyfgl/Screenshot-2025-08-22-at-4.52.04-PM.png?rlkey=2ejim0cb7j6ombouh5xcwij9l&st=2lqihpxi&raw=1");
       background-repeat: repeat;
-      background-size: 200px 200px; 
-      margin: 0;
-      color: var(--ink);
-      font-family: 'Quicksand', sans-serif;
+      background-size: 200px 200px;
     }
 
+    /* NAV */
     header{
-      position: sticky; top:0; z-index:20;
+      position: sticky;
+      top:0;
       background:rgba(255,255,255,.8);
       backdrop-filter: blur(8px);
       border-bottom:1px solid var(--ring);
       padding: .9rem 1.25rem;
     }
+
     .nav{
-      max-width:1100px; margin:0 auto;
-      display:flex; align-items:center; justify-content:space-between;
+      max-width:1100px;
+      margin:auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
     }
+
     .brand{
-      font-weight:800; font-size:1.3rem; letter-spacing:.5px;
+      font-weight:800;
+      font-size:1.3rem;
     }
+
     nav a{
-      text-decoration:none; font-weight:700; color:#3a3a3a;
-      padding:.5rem .8rem; border-radius:10px;
-      transition: all .2s ease;
+      text-decoration:none;
+      font-weight:700;
+      color:#3a3a3a;
+      margin-left:1rem;
     }
-    nav a:hover{ background: #fff; box-shadow: 0 6px 14px rgba(31,41,55,.08); }
 
-    main{ max-width:900px; margin: 3rem auto; padding: 0 1.25rem; }
-
-    .title{
-      text-align: center;
-      font-family:'Playfair Display', serif;
-      font-size: clamp(2rem, 4.5vw, 3rem);
-      line-height:1.1; margin:.1rem 0 .75rem;
+    /* MAIN */
+    main{
+      max-width:900px;
+      margin:3rem auto;
+      padding:0 1.25rem;
     }
 
     .inner-page{
-      padding: 2rem;
-      background: #bed0e2;
-      margin-bottom: 2rem;
+      padding:2.5rem;
+      background:#bed0e2;
+      border-radius:20px;
     }
 
-    .personal-blog-pic {
-      max-width: 280px;
-      border-radius: 16px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .personal-blog-pic:hover {
-      transform: scale(1.05);
-      box-shadow: 0 10px 22px rgba(0,0,0,0.15);
+    .title{
+      text-align:center;
+      font-family:'Playfair Display', serif;
+      font-size:2.6rem;
+      margin-bottom:.5rem;
     }
 
-    .blog-section {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 2rem;
+    .lead{
+      text-align:center;
+      color:var(--muted);
+      margin-bottom:2rem;
     }
 
-    .blog-text {
-      flex: 1;
+    /* PROJECT CARD */
+    .project{
+      margin-bottom:2rem;
     }
 
-    .lead {
-      text-align: center;
+    .project h3{
+      margin-bottom:.5rem;
+    }
+
+    .project-section{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:2rem;
+    }
+
+    .project-text{
+      flex:1;
+      color:var(--muted);
+      line-height:1.6;
+    }
+
+    .project-img{
+      max-width:280px;
+      border-radius:16px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.1);
+      transition:.2s;
+    }
+
+    .project-img:hover{
+      transform:scale(1.05);
     }
 
     footer{
-      margin-top:3rem; background:rgba(255,255,255,.8);
-      backdrop-filter: blur(6px);
-      border-top:1px solid var(--ring); text-align:center; color:#6b7280; font-size:.95rem; padding:1rem;
+      margin-top:3rem;
+      text-align:center;
+      color:#6b7280;
+      padding:1rem;
+    }
+
+    /* MOBILE */
+    @media (max-width:768px){
+      .project-section{
+        flex-direction:column;
+        text-align:center;
+      }
     }
   </style>
 </head>
+
 <body>
 
-  <header>
-    <div class="nav">
-      <div class="brand">madebyeman</div>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
-        <a href="projects.html">Coding Projects</a>
-        <a href="writing.html">Writing Projects</a>
-        <a href="contact.html">Contact Me</a>
-      </nav>
-    </div>
-  </header>
+<header>
+  <div class="nav">
+    <div class="brand">madebyeman</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="projects.html">Coding Projects</a>
+      <a href="writing.html">Writing Projects</a>
+      <a href="contact.html">Contact Me</a>
+    </nav>
+  </div>
+</header>
 
-  <main>
-    <div class="inner-page">
-      <h1 class="title">Coding Projects</h1>
-      <p class="lead">Below are some of the projects I've worked on.</p>   
-      
+<main>
+  <div class="inner-page">
+
+    <h1 class="title">Coding Projects</h1>
+    <p class="lead">
+      A selection of projects where I combine coding with storytelling, data, and design.
+    </p>
+
+    <!-- PROJECT 1 -->
+    <div class="project">
       <h3>Personal Blog</h3>
-      <div class="blog-section">
-        <div class="blog-text">
+
+      <div class="project-section">
+        <div class="project-text">
           <p>
-            I also run a personal blog where 
+            I created a personal blog to explore storytelling in a more informal and creative space. 
+            This project helped me develop my skills in front-end design, layout, and structuring 
+            long-form writing for an online audience.
           </p>
         </div>
+
         <a href="https://emanxmubarik.github.io/confessionsofaserialoversharer/index.html" target="_blank">
-          <img src="https://www.dropbox.com/scl/fi/e57jkl4l2b9fu7skg9vl2/Screenshot-2025-08-22-at-6.24.52-PM.png?rlkey=mmxfjy3te3964nu272k0ik9y6&st=rs4sjvle&raw=1" 
-               alt="Personal Blog" class="personal-blog-pic">
+          <img 
+            src="https://www.dropbox.com/scl/fi/e57jkl4l2b9fu7skg9vl2/Screenshot-2025-08-22-at-6.24.52-PM.png?rlkey=mmxfjy3te3964nu272k0ik9y6&st=rs4sjvle&raw=1" 
+            alt="Personal Blog" 
+            class="project-img"
+          >
         </a>
       </div>
     </div>
-  </main>
 
-  <footer>
-    &copy; 2025 Made by Eman Mubarik — All rights reserved.
-  </footer>
+  </div>
+</main>
+
+<footer>
+  © 2026 Made by Eman Mubarik — All rights reserved.
+</footer>
 
 </body>
 </html>
