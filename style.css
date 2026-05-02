@@ -72,13 +72,17 @@ header{
 }
 
 .hero-img {
-    flex-shrink: 0; 
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0; 
 }
+
 .hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 80px;
+  gap: 40px;
 
   max-width: 1100px;
   margin: auto;
@@ -89,6 +93,7 @@ header{
 
 /* INTRO TEXT */
 .hero-text {
+  flex: 1;
   text-align: left;
   max-width: 500px;
 }
@@ -127,14 +132,14 @@ header{
 
 /* PROFILE IMAGE */
 .hero-img img {
-  width: 500px;
-  height: 500px;
+  width: 380px;
+  height: 380px;
   object-fit: cover;
 
   border-radius: 50%;
-  border: 5px solid white;
+  border: 6px solid white;
 
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.18);
 }
 
 /* FOOTER */
@@ -158,5 +163,10 @@ footer {
 
   .hero-buttons {
     justify-content: center;
+  }
+
+  .hero-img img {
+    width: 220px;
+    height: 220px;
   }
 }
