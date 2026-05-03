@@ -243,3 +243,33 @@ footer {
     grid-template-columns:1fr;
   }
 }
+
+/* CONTACT PAGE */
+
+.contact-container {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.contact-sub {
+  color: var(--muted);
+  margin-bottom: 30px;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  font-size: 1.1rem;
+}
+
+.contact-list a {
+  text-decoration: none;
+  color: var(--text);
+  transition: 0.2s;
+}
+
+.contact-list a:hover {
+  color: var(--accent);
+  transform: translateY(-2px);
+}
